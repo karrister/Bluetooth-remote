@@ -38,7 +38,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "9 aug 2014"
+Date "14 jun 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -194,7 +194,7 @@ L CONN_2 P?
 U 1 1 53E62EA9
 P 10450 6800
 F 0 "P?" V 10400 6800 40  0000 C CNN
-F 1 "PWR_SW" V 10500 6800 40  0000 C CNN
+F 1 "BATT_CONN" V 10500 6800 40  0000 C CNN
 F 2 "" H 10450 6800 60  0000 C CNN
 F 3 "" H 10450 6800 60  0000 C CNN
 	1    10450 6800
@@ -526,6 +526,19 @@ F 3 "~" H 9700 6100 30  0000 C CNN
 	1    9700 6100
 	0    -1   -1   0   
 $EndComp
+Text Notes 8750 4525 0    60   ~ 0
+POWER INPUT CIRCUIT\n1.5V TO 3.3V BOOST
+$Comp
+L CONN_2 P?
+U 1 1 557DE603
+P 10975 6075
+F 0 "P?" V 10925 6075 40  0000 C CNN
+F 1 "CONN_2" V 11025 6075 40  0000 C CNN
+F 2 "" H 10975 6075 60  0000 C CNN
+F 3 "" H 10975 6075 60  0000 C CNN
+	1    10975 6075
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	3650 4650 3050 4650
 Wire Wire Line
@@ -678,10 +691,6 @@ Wire Wire Line
 Wire Wire Line
 	8550 3375 5525 3375
 Wire Wire Line
-	5525 3375 5525 2250
-Wire Wire Line
-	5525 2250 4700 2250
-Wire Wire Line
 	6875 4350 6975 4350
 Connection ~ 6975 4350
 Wire Wire Line
@@ -803,7 +812,9 @@ Wire Wire Line
 Wire Wire Line
 	10350 6350 10350 6450
 Wire Wire Line
-	10550 4700 10550 6450
+	10550 4700 10550 5975
+Wire Wire Line
+	10550 6175 10550 6450
 Wire Wire Line
 	10300 5500 10400 5500
 Wire Wire Line
@@ -846,8 +857,6 @@ Connection ~ 10150 4000
 Wire Wire Line
 	9750 3775 9750 4300
 Connection ~ 9750 4300
-Text Notes 8750 4525 0    60   ~ 0
-POWER INPUT CIRCUIT\n1.5V TO 3.3V BOOST
 Wire Wire Line
 	8500 5900 8350 5900
 Wire Wire Line
@@ -857,4 +866,16 @@ Wire Wire Line
 Wire Wire Line
 	8350 6100 8350 6750
 Connection ~ 8350 6350
+Wire Wire Line
+	2600 2450 2300 2450
+Wire Wire Line
+	2300 2450 2300 3000
+Wire Wire Line
+	2300 3000 5525 3000
+Wire Wire Line
+	5525 3000 5525 3375
+Wire Wire Line
+	10625 6175 10550 6175
+Wire Wire Line
+	10550 5975 10625 5975
 $EndSCHEMATC
