@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 20/06/2015 22:48:54
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 21/06/2015 00:19:08
 
 BeginCmp
 TimeStamp = /53E64853;
@@ -67,14 +67,14 @@ BeginCmp
 TimeStamp = /55857A3F;
 Reference = D1;
 ValeurCmp = TBD;
-IdModule  = ;
+IdModule  = SOD-123;
 EndCmp
 
 BeginCmp
 TimeStamp = /53E64862;
 Reference = D2;
 ValeurCmp = TBD;
-IdModule  = ;
+IdModule  = SOD-123;
 EndCmp
 
 BeginCmp
@@ -95,7 +95,7 @@ BeginCmp
 TimeStamp = /53E66689;
 Reference = D5;
 ValeurCmp = DIODESCH;
-IdModule  = ;
+IdModule  = SOD-123;
 EndCmp
 
 BeginCmp
@@ -326,7 +326,7 @@ BeginCmp
 TimeStamp = /53E657F1;
 Reference = U3;
 ValeurCmp = TPS61006;
-IdModule  = ;
+IdModule  = VSSOP-10-DGS;
 EndCmp
 
 BeginCmp
