@@ -1,4 +1,4 @@
-update=20/06/2015 17:30:46
+update=20/06/2015 22:49:09
 version=1
 last_client=kicad
 [cvpcb]
@@ -45,14 +45,14 @@ LibName15=pga_sockets
 LibName16=valves
 [eeschema]
 version=1
-LibDir=../../../thesis phone/HW design/revA1/imx23_phone/library;../library
+LibDir=../library
 NetFmtName=
 RptD_X=0
 RptD_Y=100
 RptLab=1
 LabSize=60
 [eeschema/libraries]
-LibName1=C:/Karrin/projects/thesis phone/HW design/revA1/imx23_phone
+LibName1=C:/Karrin/projects/bluetooth_remote/bluetooth_remote/HW design/revA1/imx23_phone
 LibName2=power
 LibName3=device
 LibName4=transistors
@@ -83,6 +83,6 @@ LibName28=opto
 LibName29=atmel
 LibName30=contrib
 LibName31=valves
-LibName32=C:/Karrin/projects/remote_bt_shutter/HW design/library/remote_bt_shutter
+LibName32=C:/Karrin/projects/bluetooth_remote/bluetooth_remote/HW design/library/remote_bt_shutter
 [general]
 version=1
