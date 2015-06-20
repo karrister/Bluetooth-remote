@@ -1,0 +1,3 @@
+[submodule "kicad_parts"]
+	path = kicad_parts
+	url = https://github.com/karrister/kicad_parts
