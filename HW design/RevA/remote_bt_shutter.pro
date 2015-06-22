@@ -1,6 +1,6 @@
-update=22/06/2015 01:00:19
+update=23/06/2015 00:22:07
 version=1
-last_client=pcbnew
+last_client=kicad
 [cvpcb]
 version=1
 NetIExt=net
@@ -47,8 +47,6 @@ LibName29=atmel
 LibName30=contrib
 LibName31=valves
 LibName32=C:/Karrin/projects/bluetooth_remote/bluetooth_remote/HW design/library/remote_bt_shutter
-[general]
-version=1
 [pcbnew]
 version=1
 LastNetListRead=
@@ -87,3 +85,5 @@ LibName14=dip_sockets
 LibName15=pga_sockets
 LibName16=valves
 LibName17=C:/Karrin/projects/bluetooth_remote/bluetooth_remote/kicad_parts/general_smd
+[general]
+version=1

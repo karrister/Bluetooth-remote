@@ -38,7 +38,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "20 jun 2015"
+Date "22 jun 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -407,12 +407,12 @@ $EndComp
 $Comp
 L +3.3V #PWR04
 U 1 1 53E65AA7
-P 10150 3525
-F 0 "#PWR04" H 10150 3485 30  0001 C CNN
-F 1 "+3.3V" H 10150 3635 30  0000 C CNN
-F 2 "" H 10150 3525 60  0000 C CNN
-F 3 "" H 10150 3525 60  0000 C CNN
-	1    10150 3525
+P 10150 2850
+F 0 "#PWR04" H 10150 2810 30  0001 C CNN
+F 1 "+3.3V" H 10150 2960 30  0000 C CNN
+F 2 "" H 10150 2850 60  0000 C CNN
+F 3 "" H 10150 2850 60  0000 C CNN
+	1    10150 2850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -836,7 +836,7 @@ Wire Wire Line
 Wire Wire Line
 	8150 4000 10550 4000
 Wire Wire Line
-	10150 3525 10150 4000
+	10150 3400 10150 4000
 Connection ~ 10150 3775
 Connection ~ 10150 4000
 Wire Wire Line
@@ -1105,4 +1105,25 @@ F 3 "" H 2550 6650 60  0000 C CNN
 	1    2550 6650
 	0    1    1    0   
 $EndComp
+$Comp
+L DIODE D6
+U 1 1 55886569
+P 10150 3200
+F 0 "D6" H 10150 3300 40  0000 C CNN
+F 1 "0" H 10150 3100 40  0000 C CNN
+F 2 "~" H 10150 3200 60  0000 C CNN
+F 3 "~" H 10150 3200 60  0000 C CNN
+	1    10150 3200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10150 3000 10150 2850
+Wire Wire Line
+	10150 3475 10400 3475
+Wire Wire Line
+	10400 3475 10400 2900
+Wire Wire Line
+	10400 2900 10150 2900
+Connection ~ 10150 2900
+Connection ~ 10150 3475
 $EndSCHEMATC
