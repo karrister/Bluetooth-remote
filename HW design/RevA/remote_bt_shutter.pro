@@ -1,4 +1,4 @@
-update=21/06/2015 01:30:37
+update=22/06/2015 01:00:19
 version=1
 last_client=pcbnew
 [cvpcb]
@@ -53,8 +53,8 @@ version=1
 version=1
 LastNetListRead=
 UseCmpFile=1
-PadDrill=0.000000000000
-PadDrillOvalY=0.000000000000
+PadDrill=0.600000000000
+PadDrillOvalY=0.600000000000
 PadSizeH=1.600000000000
 PadSizeV=5.700000000000
 PcbTextSizeV=1.500000000000
@@ -87,4 +87,3 @@ LibName14=dip_sockets
 LibName15=pga_sockets
 LibName16=valves
 LibName17=C:/Karrin/projects/bluetooth_remote/bluetooth_remote/kicad_parts/general_smd
-LibName18=C:/Karrin/projects/kicad_parts/general_smd

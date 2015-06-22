@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 21/06/2015 00:19:08
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 22/06/2015 00:05:31
 
 BeginCmp
 TimeStamp = /53E64853;
@@ -109,7 +109,7 @@ BeginCmp
 TimeStamp = /53E6667A;
 Reference = L1;
 ValeurCmp = INDUCTOR;
-IdModule  = ;
+IdModule  = NR60xx;
 EndCmp
 
 BeginCmp
@@ -319,7 +319,7 @@ BeginCmp
 TimeStamp = /53E611AE;
 Reference = U2;
 ValeurCmp = EGBT-046S;
-IdModule  = ;
+IdModule  = EGBT-046S;
 EndCmp
 
 BeginCmp
