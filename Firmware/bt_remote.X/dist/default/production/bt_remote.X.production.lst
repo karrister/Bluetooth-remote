@@ -1,0 +1,339 @@
+
+
+Microchip Technology PIC18 LITE Macro Assembler V1.31 build 56723 
+                                                                                               Sat Jun 27 20:32:54 2015
+
+Microchip Technology Omniscient Code Generator (Lite mode) build 56723
+     1                           	processor	18F14K50
+     2                           	fnconf	rparam,??,?,0
+     3                           	opt	pw 120
+     4                           	opt	lm
+     5                           	psect	text0,global,reloc=2,class=CODE,delta=1
+     6                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     7                           	psect	bssCOMRAM,global,class=COMRAM,space=1,delta=1
+     8                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1
+     9                           	psect	text1,global,reloc=2,class=CODE,delta=1
+    10                           	psect	text2,global,reloc=2,class=CODE,delta=1
+    11                           	psect	text3,global,reloc=2,class=CODE,delta=1
+    12                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1
+    13                           	psect	rparam,global,class=COMRAM,space=1,delta=1
+    14  0000                     
+    15                           ; 2 bytes @ 0x0
+    16 ;;
+    17 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+    18 ;;
+    19 ;; *************** function _main *****************
+    20 ;; Defined at:
+    21 ;;		line 60 in file "main.c"
+    22 ;; Parameters:    Size  Location     Type
+    23 ;;		None
+    24 ;; Auto vars:     Size  Location     Type
+    25 ;;		None
+    26 ;; Return value:  Size  Location     Type
+    27 ;;                  2   16[COMRAM] int 
+    28 ;; Registers used:
+    29 ;;		cstack
+    30 ;; Tracked objects:
+    31 ;;		On entry : 0/0
+    32 ;;		On exit  : 0/0
+    33 ;;		Unchanged: 0/0
+    34 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2
+    35 ;;      Params:         0       0       0       0
+    36 ;;      Locals:         0       0       0       0
+    37 ;;      Temps:          0       0       0       0
+    38 ;;      Totals:         0       0       0       0
+    39 ;;Total ram usage:        0 bytes
+    40 ;; Hardware stack levels required when called:    1
+    41 ;; This function calls:
+    42 ;;		_get_config_from_bt
+    43 ;;		_init
+    44 ;;		_set_default_config
+    45 ;; This function is called by:
+    46 ;;		Startup code after reset
+    47 ;; This function uses a non-reentrant model
+    48 ;;
+    49                           
+    50                           	psect	text0
+    51  003FE8                     __ptext0:
+    52                           	opt stack 0
+    53  003FE8                     _main:
+    54                           	opt stack 30
+    55                           
+    56                           ;main.c: 62: init();
+    57                           
+    58                           ;incstack = 0
+    59  003FE8  ECEE  F01F         	call	_init	;wreg free
+    60                           
+    61                           ;main.c: 66: if(device_status.is_bt_device_connected)
+    62  003FEC  A001               	btfss	_device_status,0,c
+    63  003FEE  D004               	goto	l603
+    64                           
+    65                           ;main.c: 67: {
+    66                           ;main.c: 68: get_config_from_bt();
+    67  003FF0  ECED  F01F         	call	_get_config_from_bt	;wreg free
+    68                           
+    69                           ;main.c: 69: }
+    70  003FF4  EF00  F000         	goto	start
+    71  003FF8                     l603:
+    72                           
+    73                           ;main.c: 70: else
+    74                           ;main.c: 71: {
+    75                           ;main.c: 72: set_default_config();
+    76  003FF8  ECEF  F01F         	call	_set_default_config	;wreg free
+    77  003FFC  EF00  F000         	goto	start
+    78  004000                     __end_of_main:
+    79                           	opt stack 0
+    80                           
+    81                           	psect	cinit
+    82  003FE0                     __pcinit:
+    83                           	opt stack 0
+    84  003FE0                     start_initialization:
+    85                           	opt stack 0
+    86  003FE0                     __initialization:
+    87                           	opt stack 0
+    88                           
+    89                           ; Clear objects allocated to COMRAM (1 bytes)
+    90  003FE0  6A01               	clrf	__pbssCOMRAM& (0+255),c
+    91  003FE2                     end_of_initialization:
+    92                           	opt stack 0
+    93  003FE2                     __end_of__initialization:
+    94                           	opt stack 0
+    95  003FE2  0100               	movlb	0
+    96  003FE4  EFF4  F01F         	goto	_main	;jump to C main() function
+    97                           
+    98                           	psect	bssCOMRAM
+    99  000001                     __pbssCOMRAM:
+   100                           	opt stack 0
+   101  000001                     _device_status:
+   102                           	opt stack 0
+   103  000001                     	ds	1
+   104                           
+   105                           	psect	cstackCOMRAM
+   106  000000                     __pcstackCOMRAM:
+   107                           	opt stack 0
+   108  000000                     
+   109 ;; *************** function _set_default_config *****************
+   110 ;; Defined at:
+   111 ;;		line 55 in file "main.c"
+   112 ;; Parameters:    Size  Location     Type
+   113 ;;		None
+   114 ;; Auto vars:     Size  Location     Type
+   115 ;;		None
+   116 ;; Return value:  Size  Location     Type
+   117 ;;		None               void
+   118 ;; Registers used:
+   119 ;;		None
+   120 ;; Tracked objects:
+   121 ;;		On entry : 0/0
+   122 ;;		On exit  : 0/0
+   123 ;;		Unchanged: 0/0
+   124 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2
+   125 ;;      Params:         0       0       0       0
+   126 ;;      Locals:         0       0       0       0
+   127 ;;      Temps:          0       0       0       0
+   128 ;;      Totals:         0       0       0       0
+   129 ;;Total ram usage:        0 bytes
+   130 ;; Hardware stack levels used:    1
+   131 ;; This function calls:
+   132 ;;		Nothing
+   133 ;; This function is called by:
+   134 ;;		_main
+   135 ;; This function uses a non-reentrant model
+   136 ;;
+   137                           
+   138                           	psect	text1
+   139  003FDE                     __ptext1:
+   140                           	opt stack 0
+   141  003FDE                     _set_default_config:
+   142                           	opt stack 30
+   143                           
+   144                           ;incstack = 0
+   145  003FDE  0012               	return	
+   146  003FE0                     __end_of_set_default_config:
+   147                           	opt stack 0
+   148                           
+   149 ;; *************** function _init *****************
+   150 ;; Defined at:
+   151 ;;		line 22 in file "main.c"
+   152 ;; Parameters:    Size  Location     Type
+   153 ;;		None
+   154 ;; Auto vars:     Size  Location     Type
+   155 ;;		None
+   156 ;; Return value:  Size  Location     Type
+   157 ;;		None               void
+   158 ;; Registers used:
+   159 ;;		None
+   160 ;; Tracked objects:
+   161 ;;		On entry : 0/0
+   162 ;;		On exit  : 0/0
+   163 ;;		Unchanged: 0/0
+   164 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2
+   165 ;;      Params:         0       0       0       0
+   166 ;;      Locals:         0       0       0       0
+   167 ;;      Temps:          0       0       0       0
+   168 ;;      Totals:         0       0       0       0
+   169 ;;Total ram usage:        0 bytes
+   170 ;; Hardware stack levels used:    1
+   171 ;; This function calls:
+   172 ;;		Nothing
+   173 ;; This function is called by:
+   174 ;;		_main
+   175 ;; This function uses a non-reentrant model
+   176 ;;
+   177                           
+   178                           	psect	text2
+   179  003FDC                     __ptext2:
+   180                           	opt stack 0
+   181  003FDC                     _init:
+   182                           	opt stack 30
+   183                           
+   184                           ;incstack = 0
+   185  003FDC  0012               	return	
+   186  003FDE                     __end_of_init:
+   187                           	opt stack 0
+   188                           
+   189 ;; *************** function _get_config_from_bt *****************
+   190 ;; Defined at:
+   191 ;;		line 50 in file "main.c"
+   192 ;; Parameters:    Size  Location     Type
+   193 ;;		None
+   194 ;; Auto vars:     Size  Location     Type
+   195 ;;		None
+   196 ;; Return value:  Size  Location     Type
+   197 ;;		None               void
+   198 ;; Registers used:
+   199 ;;		None
+   200 ;; Tracked objects:
+   201 ;;		On entry : 0/0
+   202 ;;		On exit  : 0/0
+   203 ;;		Unchanged: 0/0
+   204 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2
+   205 ;;      Params:         0       0       0       0
+   206 ;;      Locals:         0       0       0       0
+   207 ;;      Temps:          0       0       0       0
+   208 ;;      Totals:         0       0       0       0
+   209 ;;Total ram usage:        0 bytes
+   210 ;; Hardware stack levels used:    1
+   211 ;; This function calls:
+   212 ;;		Nothing
+   213 ;; This function is called by:
+   214 ;;		_main
+   215 ;; This function uses a non-reentrant model
+   216 ;;
+   217                           
+   218                           	psect	text3
+   219  003FDA                     __ptext3:
+   220                           	opt stack 0
+   221  003FDA                     _get_config_from_bt:
+   222                           	opt stack 30
+   223                           
+   224                           ;incstack = 0
+   225  003FDA  0012               	return	
+   226  003FDC                     __end_of_get_config_from_bt:
+   227                           	opt stack 0
+   228  0000                     
+   229                           	psect	rparam
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         1
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95      0       1
+    BANK0           160      0       0
+    BANK1           256      0       0
+    BANK2           256      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMRAM
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0       0
+                 _get_config_from_bt
+                               _init
+                 _set_default_config
+ ---------------------------------------------------------------------------------
+ (1) _set_default_config                                   0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _init                                                 0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _get_config_from_bt                                   0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _get_config_from_bt
+   _init
+   _set_default_config
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM             2FF      0       0      10        0.0%
+EEDATA             100      0       0       0        0.0%
+BITBANK2           100      0       0       6        0.0%
+BANK2              100      0       0       7        0.0%
+BITBANK1           100      0       0       9        0.0%
+BANK1              100      0       0       5        0.0%
+BITBANK0            A0      0       0       3        0.0%
+BANK0               A0      0       0       4        0.0%
+BITCOMRAM           5F      0       0       0        0.0%
+COMRAM              5F      0       1       1        1.1%
+BITSFR_1             0      0       0      40        0.0%
+SFR_1                0      0       0      40        0.0%
+BITSFR               0      0       0      40        0.0%
+SFR                  0      0       0      40        0.0%
+STACK                0      0       0       2        0.0%
+NULL                 0      0       0       0        0.0%
+ABS                  0      0       1       8        0.0%
+DATA                 0      0       1      11        0.0%
+CODE                 0      0       0       0        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V1.31 build 56723 
+Symbol Table                                                                                   Sat Jun 27 20:32:54 2015
+
+       ??_get_config_from_bt 0000                          l603 3FF8                         _main 3FE8  
+                       _init 3FDC                         start 0000                        ?_main 0000  
+                      ?_init 0000              __initialization 3FE0                 __end_of_main 4000  
+               __end_of_init 3FDE                       ??_main 0000                       ??_init 0000  
+              __activetblptr 000000           _set_default_config 3FDE          ?_set_default_config 0000  
+                 __accesstop 0060      __end_of__initialization 3FE2         ??_set_default_config 0000  
+             __pcstackCOMRAM 0000  __size_of_get_config_from_bt 0002              __CFG_USBDIV$OFF 000000  
+                    __Hparam 0000                      __Lparam 0000                      __pcinit 3FE0  
+                    __ramtop 0300                      __ptext0 3FE8                      __ptext1 3FDE  
+                    __ptext2 3FDC                      __ptext3 3FDA         end_of_initialization 3FE2  
+        start_initialization 3FE0  __size_of_set_default_config 0002                  __pbssCOMRAM 0001  
+ __end_of_get_config_from_bt 3FDC                _device_status 0001                     __Hrparam 0000  
+                   __Lrparam 0000                __size_of_main 0018                __size_of_init 0002  
+ __end_of_set_default_config 3FE0         __CFG_CPUDIV$NOCLKDIV 000000           _get_config_from_bt 3FDA  
+        ?_get_config_from_bt 0000  

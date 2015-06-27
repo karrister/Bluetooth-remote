@@ -5,9 +5,9 @@
             <name>bt_remote</name>
             <creation-uuid>582d1a33-e5e5-49dd-b7c4-e0d881d49a66</creation-uuid>
             <make-project-type>0</make-project-type>
-            <c-extensions/>
+            <c-extensions>c</c-extensions>
             <cpp-extensions/>
-            <header-extensions/>
+            <header-extensions>h</header-extensions>
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
