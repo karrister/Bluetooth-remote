@@ -12,6 +12,35 @@
 extern "C" {
 #endif
 
+#include "pic18f14k50.h"
+#include "pic_config_bits.h"
+
+/* Defines */
+#define NO_GPIO_CONFIG_THROUGH_BT
+#define ONLY_PASSIVE_CONNECTION_STATUS_QUERY
+
+#define UART_BUFFER_SIZE                    (16)
+
+#define PIN_DIRECTION_OUTPUT                (0)
+#define PIN_DIRECTION_INPUT                 (1)
+
+//States
+#define STATE_IDLE                          (1)
+#define STATE_BUTTON_PRESSED                (2)
+#define STATE_REMOTE_CMD_RECEIVED           (3)
+
+/* Macros */
+#define UART_SEND_BYTE(byte)    (TXREG = byte)
+#define UART_RECV_BYTE()        (RCREG)
+
+
+
+
+
+/* Typedefs */
+typedef unsigned char BYTE;
+
+
 /* PIC Pinout:
  * 1 - vdd
  * 2 - xtal
